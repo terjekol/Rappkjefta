@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(90deg, #000000, #a80054, #000000);
+    color: white;
+    font-size: 200%;
+    text-align: center;
+}
+
+button{
+    font-size: inherit;
+    border-radius: .3em;
+    padding: .4em;
+    background: limegreen;
+    border: none;
+    cursor: pointer;
+}
+
+div{
+    margin: 1em;
+}
+
+.rand{
+    color: limegreen;
+}
