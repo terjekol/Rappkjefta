@@ -4,46 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <style>
-        body {
-            background-color: darkblue;
-            color: white;
-            font-size: 400%;
-        }
-
-        button{
-            font-size: inherit;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <div id="content"></div>
+    <div id="content">
+        <div>
+            Tilfeldig bokstav: <div id="randNum" class="rand"></div>
+        </div>
+        <div>
+            Tilfeldig kategori: <div id="randCategory" class="rand"></div>
+        </div>
+         
+        <div>
+            <button id="pick">Trekk</button>
+        </div>
+    </div>
 
-    <script>
-        let model = {
-            letters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ',
-            currentLetter: null
-        };
-
-        show();
-        function show() {
-            document.getElementById('content').innerHTML = `
-                <div>
-                    Tilfeldig bokstav: ${model.currentLetter || ''}
-                </div>
-                 
-                <div>
-                    <button onclick="randomLetter()">Trekk</button>
-                </div>
-                `;
-        }
-
-        function randomLetter() {
-            let index = Math.floor(Math.random() * model.letters.length);
-            model.currentLetter = model.letters[index];
-            show();
-        }
+    <script src="js/main.js">
     </script>
 </body>
 </html>
